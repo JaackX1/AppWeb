@@ -1,0 +1,104 @@
+.sectionPro{
+    width: 100%;
+    min-height: 50vh;
+}
+
+.container1Pro {
+    float: left;
+    width: 100%;
+}
+
+.section-mini-11 {
+    float: left;
+    width: 25%;
+    height: 250px;
+    
+    text-align: center;
+     
+}
+.section-mini-11 img {
+    width: 25%;
+    height: auto;
+}
+
+.section-mini-12 {
+    float: left;
+    width: 25%;
+    height: 250px;
+    text-align: center;
+}
+
+
+
+.section-mini-13 {
+    float: left;
+    width: 25%;
+    height: 250px;
+    text-align: center;
+}
+.section-mini-13 img {
+    width: 40%;
+    height: auto;
+}
+
+
+
+.section-mini-14 {
+    float: left;
+    width: 25%;
+    height: 250px;
+    text-align: center;
+}
+
+.section-mini-14 img {
+    width: 40%;
+    height: auto;
+}
+
+
+.container2Pro {
+    padding-top: 5px;
+    float: left;
+    width: 100%;
+}
+
+.section-mini-21 {
+    float: left;
+    width: 19.9%;
+    height: 250px;
+    background-color: blue;
+}
+.section-mini-211 {
+    float: left;
+    width: auto;
+    height: 19%;
+    text-align: center;
+    background-color: lightseagreen;
+}
+.section-mini-22 {
+    float: left;
+    width: 60%;
+    height: 250px;
+}
+.section-mini-23 {
+    float: left;
+    width: 19.9%;
+    height: 250px;
+    background-color: pink;
+}
+
+@media screen and (max-width: 768px){
+    
+    .section-mini-21 {
+    float: left;
+    width: 0%;
+    height: 250px;
+    background-color: red;
+    }
+    .section-mini-23 {
+    float: left;
+    width: 0%;
+    height: 250px;
+    background-color: red;
+}
+}

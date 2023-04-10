@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4a5f867-3d54-4f42-b06d-272cc58bdee3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[Select p.PLAN_NOMBRE,count(c.ID_CONTRATO) as Cantidad from contrato c 
+join planes p on p.id_planes = c.ID_PLANES
+group by p.PLAN_NOMBRE
+order by p.PLAN_NOMBRE]]>
+	</queryString>
+	<field name="PLAN_NOMBRE" class="java.lang.String"/>
+	<field name="CANTIDAD" class="java.math.BigDecimal"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-21" width="595" height="93" backcolor="#28A745" uuid="2a9ffb08-a5ee-49ad-a1bd-dca8bc922296"/>
+				<staticText>
+					<reportElement x="90" y="20" width="87" height="43" forecolor="#FFFFFF" uuid="6c632819-a564-4306-87d1-159361940358"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NMA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="3e24d323-8ff0-48ea-bf2f-b0417ddaa527"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Reporte de ventas]]></text>
+				</staticText>
+				<image>
+					<reportElement x="0" y="0" width="156" height="89" uuid="5202fc2f-da42-4e2c-ac21-c20e2d51ad51"/>
+					<imageExpression><![CDATA["C:\\Users\\User\\Downloads\\Logo_PNG.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="ffb8eed9-0a53-498a-ac83-b9b31cdc9bbc"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="51d0604d-b2f0-42eb-998b-e30db23c2ede"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre plan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7dd962d2-37c1-442c-8f59-042c7f60664a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad de ventas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="2413d94b-e9fe-4e23-9a67-007e835ca12c"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="113" y="0" width="81" height="20" uuid="dae63774-7e31-4ff3-a3c7-2b7830d92c95"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PLAN_NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="418" y="0" width="26" height="20" uuid="5afce440-6a0f-43a0-9146-b9f463892f67"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CANTIDAD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="ba6db7b0-5b7e-4fa7-bb24-2f6a7bb00ef7"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="0d957aae-b0b4-4298-a3ce-230d773c0cc9"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="902160c6-04db-4ee8-9258-835795e6da50"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

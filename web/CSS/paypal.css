@@ -1,0 +1,28 @@
+
+/*--register--*/
+.register-top-grid h3, .register-bottom-grid h3 {
+    color:#000;
+    font-size: 1em;
+    padding-bottom: 5px;
+    margin: 0;
+}
+.register-top-grid div, .register-bottom-grid div {
+    width: 48%;
+    float: left;
+    margin: 10px 0;
+}
+.register-top-grid span, .register-bottom-grid span {
+    color:#555;
+    font-size: 0.8125em;
+    padding-bottom: 0.2em;
+    display: block;
+    text-transform: uppercase;
+}
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
+    border: 1px solid #EEE;
+    outline-color:#00BFF0;
+    width: 96%;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: 'Open Sans', sans-serif;
+}
