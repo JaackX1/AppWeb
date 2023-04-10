@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/WS_Login/ws_IniciarSesion?WSDL" uri="src/conf/xml-resources/web-service-references/ws_IniciarSesion/wsdl/localhost_8080/WS_Login/ws_IniciarSesion.wsdl"/>
+    <system systemId="http://localhost:8080/WS_Login/ws_IniciarSesion?xsd=1" uri="src/conf/xml-resources/web-service-references/ws_IniciarSesion/wsdl/localhost_8080/WS_Login/ws_IniciarSesion.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WS_Login/ws_Login?WSDL" uri="src/conf/xml-resources/web-service-references/ws_Login/wsdl/localhost_8080/WS_Login/ws_Login.wsdl"/>
+    <system systemId="http://localhost:8080/WS_Login/ws_Login?xsd=1" uri="src/conf/xml-resources/web-service-references/ws_Login/wsdl/localhost_8080/WS_Login/ws_Login.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WS_PayPal/ws_paypal?WSDL" uri="src/conf/xml-resources/web-service-references/ws_paypal/wsdl/localhost_8080/WS_PayPal/ws_paypal.wsdl"/>
+    <system systemId="http://localhost:8080/WS_PayPal/ws_paypal?xsd=1" uri="src/conf/xml-resources/web-service-references/ws_paypal/wsdl/localhost_8080/WS_PayPal/ws_paypal.xsd_1.xsd"/>
+</catalog>
